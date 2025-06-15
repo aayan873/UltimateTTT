@@ -1,7 +1,6 @@
-Ultimate Tic-Tac-Toe Bot Engine
+## Ultimate Tic-Tac-Toe Bot Engine
 
 # About this Repository
-----
 This is the game engine and files for a coding competition based on Ultimate Tic-Tac-Toe.
 Participants have to build their own bot that plays the game smartly and tries to win. The main game logic is already written your job is just to write a bot that plays well.
 
