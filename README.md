@@ -1,6 +1,6 @@
-# 🧠 Ultimate Tic-Tac-Toe Bot Competition
+#  Ultimate Tic-Tac-Toe Bot Competition
 
-**Ultimate Tic-Tac-Toe Bot Competition** — a coding contest where participants write bots to compete in a more strategic, multi-layered version of classic Tic-Tac-Toe.
+**Ultimate Tic-Tac-Toe Bot Competition** — a coding contest where participants write bots to compete
 
 > ⚠️ This repository contains game logic, simulation scripts, and tournament management code.
 
