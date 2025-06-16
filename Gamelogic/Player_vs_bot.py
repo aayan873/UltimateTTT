@@ -3,7 +3,7 @@
 import importlib
 from ultimate_ttt_engine import UltimateTTT
 
-user_bot = importlib.import_module("random_bot") #change with your bot's file name
+bot = importlib.import_module("random_bot") #change with your bot's file name
 
 def run_game():
     game = UltimateTTT()
@@ -18,15 +18,16 @@ def run_game():
         if player == human_player:
             move = tuple(map(int, input("Enter your move (i j): ").split()))
         else:
-            move = user_bot.play(game.board, prev_move, bot_player)
+            move = bot.play(game.board, prev_move, bot_player)
 
-        if not game.make_move(*move):
+        if not game.move(*move):
             print("Invalid move. You lose!")
             return
 
         prev_move = move
+        player = 3 - player
         winner = game.get_winner()
-        if winner:
+        if winner and winner != 3 :
             game.print_board()
             print(f"Player {winner} wins!")
             return
@@ -35,7 +36,6 @@ def run_game():
             print("Draw!")
             return
 
-        player = 3 - player
 
 if __name__ == '__main__':
     run_game()

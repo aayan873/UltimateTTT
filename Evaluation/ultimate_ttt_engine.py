@@ -1,28 +1,29 @@
 X, O, DRAW = 1, 2, 3
 
 def check_small(board, minir, minic):
-    b = [[]]
+    b = [[0 for _ in range(3)] for _ in range(3)]  
     for i in range(3):
-        for j in range (3):
-            b[i][j] = board[minir*3 + i][minic*3 + j]
+        for j in range(3):
+            b[i][j] = board[minir * 3 + i][minic * 3 + j]
 
     for r in range(3):
         if b[r][0] == b[r][1] == b[r][2] != 0:
             return b[r][0]
-        
+
     for c in range(3):
         if b[0][c] == b[1][c] == b[2][c] != 0:
             return b[0][c]
-        
+
     if b[0][0] == b[1][1] == b[2][2] != 0:
         return b[0][0]
-    
+
     if b[0][2] == b[1][1] == b[2][0] != 0:
         return b[0][2]
-    
+
     if all(b[i][j] != 0 for i in range(3) for j in range(3)):
-        return DRAW
+        return 3
     return 0
+
 
 
 def check_global(mainboard):
