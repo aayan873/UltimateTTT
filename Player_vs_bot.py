@@ -3,7 +3,7 @@
 import importlib
 from ultimate_ttt_engine import UltimateTTT
 
-user_bot = importlib.import_module("random_bot")
+user_bot = importlib.import_module("random_bot") #change with your bot's file name
 
 def run_game():
     game = UltimateTTT()

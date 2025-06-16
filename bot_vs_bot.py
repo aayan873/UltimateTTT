@@ -1,10 +1,10 @@
-# This file is to run a game for bot v/s bot 
+# This file is to run a game  bot v/s bot 
 
 
 import importlib
 from ultimate_ttt_engine import UltimateTTT
 
-user_bot = importlib.import_module("bot_template")
+user_bot = importlib.import_module("bot_template") #change with your bot's file name
 random_bot = importlib.import_module("random_bot")
 
 def run():
