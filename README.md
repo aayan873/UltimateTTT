@@ -16,6 +16,10 @@
 - If a local board is already won or full, the next player can choose any available cell on any valid board.
 
 ---
+## 🔍 Problem Statement
+Link to Problem statement - 
+
+---
 ![687474703a2f2f7374617469632e7a7962756c756f2e636f6d2f54616e6757696c6c2f7a30636368307761717274303735387761377932666174382f496e636f6d706c6574655f556c74696d6174655f5469632d5461632d546f655f426f6172642e706e67](https://github.com/user-attachments/assets/ba4d93f1-5403-41ad-a73e-f6bd45b8c959)
 
 
