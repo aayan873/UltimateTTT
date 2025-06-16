@@ -16,26 +16,8 @@
 - If a local board is already won or full, the next player can choose any available cell on any valid board.
 
 ---
+![687474703a2f2f7374617469632e7a7962756c756f2e636f6d2f54616e6757696c6c2f7a30636368307761717274303735387761377932666174382f496e636f6d706c6574655f556c74696d6174655f5469632d5461632d546f655f426f6172642e706e67](https://github.com/user-attachments/assets/ba4d93f1-5403-41ad-a73e-f6bd45b8c959)
 
-## 🧩 Repository Structure
-
-UltimateTTT/  
-📁 ultimate-ttt-competition/
-├── evaluation/
-│ ├──bots/
-│ │ ├── random_bot.py # Example random bot
-│ │ └── ... # Other participant bots
-│ ├── judge.py
-│ ├── ultimate_ttt_engine.py # Game logic and rule enforcement
-│ ├──Compfile/
-│ │ ├── bot_template.py # Bot template where participants can implement thier bots
-│ │ ├── player_vs_bot.py # Script to play against any bot manually
-│ │ ├── bot_vs_bot.py # Game between 2 bots
-│ │ ├── random_bot.py # Bot that return random moves
-│ │ ├── ultimate_ttt_engine.py # Game logic and rule enforcement
-│ └── README.md # This file
-
----
 
 ## Goal of the Competition
 Create the best bot that can beat other bots in Ultimate Tic-Tac-Toe.
