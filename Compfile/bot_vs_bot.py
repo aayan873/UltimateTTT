@@ -14,10 +14,20 @@ def run():
     while True:
         game.print_board()
         if player == 1:
-            move = bot1.play(game.board, prev_move, 1)
+            try:
+                move = bot1.play(game.board, prev_move, 1)
+            except Exception as e:
+                print(f"Bot crashed or returned an invalid move: {e}")
+                print("Bot loses!")
+                return
 
         else:
-            move = bot2.play(game.board, prev_move, 2)
+            try:
+                move = bot2.play(game.board, prev_move, 2)
+            except Exception as e:
+                print(f"Bot crashed or returned an invalid move: {e}")
+                print("Bot loses!")
+                return
 
         if not game.move(*move):
             print(f"Invalid move by Player {player} at {move}. Player {3 - player} wins!")

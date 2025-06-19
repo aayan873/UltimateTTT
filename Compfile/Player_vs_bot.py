@@ -15,27 +15,41 @@ def run_game():
     while True:
         game.print_board()
         print(f"Player {player}'s turn")
-        if player == human_player:
-            move = tuple(map(int, input("Enter your move (i j): ").split()))
-        else:
-            move = bot.play(game.board, prev_move, bot_player)
 
-        if not game.move(*move):
-            print("Invalid move. You lose!")
-            return
+        if player == human_player:
+            while True:
+                try:
+                    move = tuple(map(int, input("Enter your move (i j): ").split()))
+                    if len(move) != 2:
+                        raise ValueError
+                    if not game.move(*move):
+                        print("Invalid move. Try again.")
+                        continue
+                    break
+                except:
+                    print("Invalid input. Please enter two integers separated by a space.")
+        else:
+            try:
+                move = bot.play(game.board, prev_move, bot_player)
+            except Exception as e:
+                print(f"Bot crashed or returned an invalid move: {e}")
+                print("Bot loses!")
+                return
+            if not game.move(*move):
+                print(f"Invalid move by Bot. Bot loses!")
+                return
 
         prev_move = move
-        player = 3 - player
         winner = game.get_winner()
-        if winner and winner != 3 :
+        if winner:
             game.print_board()
-            print(f"Player {winner} wins!")
+            if winner == 3:
+                print("Draw!")
+            else:
+                print(f"Player {winner} wins!")
             return
 
-        if all(game.board[i][j] != 0 for i in range(9) for j in range(9)):
-            print("Draw!")
-            return
-
+        player = 3 - player
 
 if __name__ == '__main__':
     run_game()
